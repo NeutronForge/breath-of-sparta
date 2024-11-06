@@ -1,0 +1,8 @@
+accessWidener v2 named
+
+# Access Widener for Breath of Sparta
+
+accessible method net/minecraft/entity/projectile/AbstractWindChargeEntity <init> (Lnet/minecraft/entity/EntityType;DDDLnet/minecraft/util/math/Vec3d;Lnet/minecraft/world/World;)V
+accessible method net/minecraft/client/render/entity/EntityRenderers register (Lnet/minecraft/entity/EntityType;Lnet/minecraft/client/render/entity/EntityRendererFactory;)V
+accessible method net/minecraft/client/render/entity/model/EntityModelLayers register (Ljava/lang/String;Ljava/lang/String;)Lnet/minecraft/client/render/entity/model/EntityModelLayer;
+accessible method net/minecraft/client/render/entity/model/EntityModelLayers registerMain (Ljava/lang/String;)Lnet/minecraft/client/render/entity/model/EntityModelLayer;

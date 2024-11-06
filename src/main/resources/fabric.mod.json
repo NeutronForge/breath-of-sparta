@@ -1,0 +1,43 @@
+{
+	"schemaVersion": 1,
+	"id": "breath_of_sparta",
+	"version": "${version}",
+	"name": "Breath of Sparta",
+	"description": "Weapons of old",
+	"authors": [
+		"Echo"
+	],
+	"contact": {
+		"discord": "@blightedheart",
+		"sources": "https://github.com/NeutronForge/",
+		"modrinth": "https://modrinth.com/mod/",
+		"curseforge": "https://www.curseforge.com/minecraft/mc-mods/"
+	},
+	"license": "MIT",
+	"icon": "assets/breath_of_sparta/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.echo.breath_of_sparta.BreathOfSparta"
+		],
+		"client": [
+			"com.echo.breath_of_sparta.BreathOfSpartaClient"
+		],
+		"fabric-datagen": [
+			"com.echo.breath_of_sparta.BreathOfSpartaDataGenerator"
+		]
+	},
+	"mixins": [
+		"breath_of_sparta.mixins.json"
+	],
+	"accessWidener": "breath_of_sparta.accesswidener",
+	"depends": {
+		"fabricloader": ">=0.16.9",
+		"minecraft": "~1.21.3",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}

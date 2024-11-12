@@ -19,17 +19,5 @@ import java.util.Map;
 
 @Mixin(EntityModels.class)
 public class ExampleMixin {
-	@Inject(at = @At("HEAD"), method = "getModels")
-	private static void init(CallbackInfoReturnable<Map<EntityModelLayer, TexturedModelData>> cir) {
-		ImmutableMap.Builder<EntityModelLayer, TexturedModelData> builder = ImmutableMap.builder();
 
-		builder.put(ModEntityModelLayers.WOODEN_SPEAR, SpearEntityModel.getTexturedModelData());
-		builder.put(ModEntityModelLayers.STONE_SPEAR, SpearEntityModel.getTexturedModelData());
-		builder.put(ModEntityModelLayers.IRON_SPEAR, SpearEntityModel.getTexturedModelData());
-		builder.put(ModEntityModelLayers.GOLDEN_SPEAR, SpearEntityModel.getTexturedModelData());
-		builder.put(ModEntityModelLayers.DIAMOND_SPEAR, SpearEntityModel.getTexturedModelData());
-		builder.put(ModEntityModelLayers.NETHERITE_SPEAR, SpearEntityModel.getTexturedModelData());
-		// This code is injected into the start of EntityModels.getModels()V
-
-	}
 }

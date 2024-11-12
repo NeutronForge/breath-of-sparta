@@ -9,9 +9,6 @@ import net.minecraft.client.render.entity.model.EntityModel;
 import net.minecraft.data.client.TextureKey;
 import net.minecraft.util.Identifier;
 
-import java.util.Optional;
-
-@Environment(EnvType.CLIENT)
 public class SpearEntityModel extends EntityModel<SpearEntityRenderState> {
     public static final Identifier TEXTURE = Identifier.ofVanilla("textures/entity/trident.png");
 

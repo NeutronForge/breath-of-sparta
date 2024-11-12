@@ -15,7 +15,6 @@ import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.entity.projectile.AbstractWindChargeEntity;
 import net.minecraft.util.Identifier;
 
-@Environment(EnvType.CLIENT)
 public class CustomWindChargeEntityRenderer extends EntityRenderer<AbstractWindChargeEntity, EntityRenderState> {
     private static final Identifier TEXTURE = Identifier.ofVanilla("textures/entity/projectiles/wind_charge.png");
     private final WindChargeEntityModel model;

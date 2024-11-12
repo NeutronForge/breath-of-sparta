@@ -21,16 +21,13 @@ import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.RotationAxis;
 
-import java.util.function.UnaryOperator;
-
-@Environment(EnvType.CLIENT)
 public class SpearEntityRenderer extends EntityRenderer<SpearEntity, SpearEntityRenderState> {
     public final Identifier texture;// = Identifier.of(BreathOfSparta.MOD_ID, "textures/entity/" + ".png");
     private final SpearEntityModel model;
 
     public SpearEntityRenderer(EntityRendererFactory.Context context, EntityModelLayer layer) {
         super(context);
-        this.texture = layer.id().withPath((UnaryOperator<String>)(path -> BreathOfSparta.MOD_ID + "textures/entity/" + path + ".png"));
+        this.texture = layer.id().withPath(path -> BreathOfSparta.MOD_ID + "textures/entity/" + path + ".png");
         this.model = new SpearEntityModel(context.getPart(layer));
     }
 

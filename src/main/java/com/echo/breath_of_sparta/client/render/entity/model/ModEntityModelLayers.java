@@ -4,26 +4,31 @@ import com.echo.breath_of_sparta.BreathOfSparta;
 import com.google.common.collect.Sets;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
+import net.fabricmc.fabric.api.client.rendering.v1.EntityModelLayerRegistry;
 import net.minecraft.client.render.entity.model.EntityModelLayer;
 import net.minecraft.client.render.entity.model.EntityModelLayers;
 import net.minecraft.util.Identifier;
 
 import java.util.Set;
 
-@Environment(EnvType.CLIENT)
-public class ModEntityModelLayers extends EntityModelLayers {
-    private static final Set<EntityModelLayer> LAYERS = Sets.<EntityModelLayer>newHashSet();
+public class ModEntityModelLayers {
+    private static final Set<EntityModelLayer> LAYERS = Sets.newHashSet();
 
-    public static final EntityModelLayer WOODEN_SPEAR = registerFromModMain("spear/wooden");
-    public static final EntityModelLayer STONE_SPEAR = registerFromModMain("spear/stone");
-    public static final EntityModelLayer IRON_SPEAR = registerFromModMain("spear/iron");
-    public static final EntityModelLayer GOLDEN_SPEAR = registerFromModMain("spear/golden");
-    public static final EntityModelLayer DIAMOND_SPEAR = registerFromModMain("spear/diamond");
-    public static final EntityModelLayer NETHERITE_SPEAR = registerFromModMain("spear/netherite");
+    public static final EntityModelLayer WOODEN_SPEAR = registerSpear("spear/wooden");
+    public static final EntityModelLayer STONE_SPEAR = registerSpear("spear/stone");
+    public static final EntityModelLayer IRON_SPEAR = registerSpear("spear/iron");
+    public static final EntityModelLayer GOLDEN_SPEAR = registerSpear("spear/golden");
+    public static final EntityModelLayer DIAMOND_SPEAR = registerSpear("spear/diamond");
+    public static final EntityModelLayer NETHERITE_SPEAR = registerSpear("spear/netherite");
 
+    private static EntityModelLayer registerSpear(String id) {
+        return registerFromModMain(id, SpearEntityModel::getTexturedModelData);
+    }
 
-    private static EntityModelLayer registerFromModMain(String id) {
-        return registerFromMod(id, "main");
+    private static EntityModelLayer registerFromModMain(String id, EntityModelLayerRegistry.TexturedModelDataProvider provider) {
+        EntityModelLayer layer = registerFromMod(id, "main");
+        EntityModelLayerRegistry.registerModelLayer(layer, provider);
+        return layer;
     }
 
     private static EntityModelLayer registerFromMod(String id, String layer) {
@@ -40,4 +45,5 @@ public class ModEntityModelLayers extends EntityModelLayers {
 
     }
 
+    public static void init() { }
 }

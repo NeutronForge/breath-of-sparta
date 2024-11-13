@@ -58,4 +58,3 @@ public class SpearEntityRenderer extends EntityRenderer<SpearEntity, SpearEntity
 
 
 }
-

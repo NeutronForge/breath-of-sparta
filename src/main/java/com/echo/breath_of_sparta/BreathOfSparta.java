@@ -1,6 +1,5 @@
 package com.echo.breath_of_sparta;
 
-import com.echo.breath_of_sparta.client.render.entity.ModEntityRenderers;
 import com.echo.breath_of_sparta.entity.ModEntityType;
 import com.echo.breath_of_sparta.item.ModItems;
 import net.fabricmc.api.ModInitializer;
@@ -18,7 +17,6 @@ public class BreathOfSparta implements ModInitializer {
 	public void onInitialize() {
 		ModItems.registerModItems();
 		ModEntityType.registerModEntityTypes();
-		ModEntityRenderers.registerModEntityRenderers();
 
 	}
 }

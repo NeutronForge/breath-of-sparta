@@ -17,6 +17,5 @@ public class BreathOfSparta implements ModInitializer {
 	public void onInitialize() {
 		ModItems.registerModItems();
 		ModEntityType.registerModEntityTypes();
-
 	}
 }

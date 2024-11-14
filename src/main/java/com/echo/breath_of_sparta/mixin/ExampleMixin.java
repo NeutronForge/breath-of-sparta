@@ -19,5 +19,4 @@ import java.util.Map;
 
 @Mixin(EntityModels.class)
 public class ExampleMixin {
-
 }

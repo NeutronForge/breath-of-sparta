@@ -20,6 +20,5 @@ public class BreathOfSpartaClient implements ClientModInitializer {
         EntityRendererRegistry.register(ModEntityType.GOLDEN_SPEAR, context -> new SpearEntityRenderer(context, ModEntityModelLayers.GOLDEN_SPEAR));
         EntityRendererRegistry.register(ModEntityType.DIAMOND_SPEAR, context -> new SpearEntityRenderer(context, ModEntityModelLayers.DIAMOND_SPEAR));
         EntityRendererRegistry.register(ModEntityType.NETHERITE_SPEAR, context -> new SpearEntityRenderer(context, ModEntityModelLayers.NETHERITE_SPEAR));
-
     }
 }

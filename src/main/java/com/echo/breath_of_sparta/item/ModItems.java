@@ -24,8 +24,7 @@ public class ModItems {
     public static final float SpearDurabilityMultiplier = 0.5F;
 
 
-    public static final Item STORM_CHARGE = registerItem("storm_charge", (settings) ->
-            new CustomWindChargeItem(settings));
+    public static final Item STORM_CHARGE = registerItem("storm_charge", CustomWindChargeItem::new);
 
 
 
@@ -35,7 +34,6 @@ public class ModItems {
                     .attributeModifiers(SpearItem.createAttributeModifiers())
                     .component(DataComponentTypes.TOOL, SpearItem.createToolComponent())
                     .enchantable(1)
-                    .modelId(Identifier.ofVanilla("trident_in_hand"))
             ));
 
     public static final Item STONE_SPEAR = registerItem("stone_spear", (settings) ->
@@ -44,7 +42,6 @@ public class ModItems {
                     .attributeModifiers(SpearItem.createAttributeModifiers())
                     .component(DataComponentTypes.TOOL, SpearItem.createToolComponent())
                     .enchantable(1)
-                    .modelId(Identifier.ofVanilla("trident_in_hand"))
             ));
 
     public static final Item IRON_SPEAR = registerItem("iron_spear", (settings) ->
@@ -53,7 +50,6 @@ public class ModItems {
                     .attributeModifiers(SpearItem.createAttributeModifiers())
                     .component(DataComponentTypes.TOOL, SpearItem.createToolComponent())
                     .enchantable(1)
-                    .modelId(Identifier.ofVanilla("trident_in_hand"))
             ));
 
     public static final Item GOLDEN_SPEAR = registerItem("golden_spear", (settings) ->
@@ -62,7 +58,6 @@ public class ModItems {
                     .attributeModifiers(SpearItem.createAttributeModifiers())
                     .component(DataComponentTypes.TOOL, SpearItem.createToolComponent())
                     .enchantable(1)
-                    .modelId(Identifier.ofVanilla("trident_in_hand"))
             ));
 
     public static final Item DIAMOND_SPEAR = registerItem("diamond_spear", (settings) ->
@@ -71,7 +66,6 @@ public class ModItems {
                     .attributeModifiers(SpearItem.createAttributeModifiers())
                     .component(DataComponentTypes.TOOL, SpearItem.createToolComponent())
                     .enchantable(1)
-                    .modelId(Identifier.ofVanilla("trident_in_hand"))
             ));
 
     public static final Item NETHERITE_SPEAR = registerItem("netherite_spear", (settings) ->
@@ -80,7 +74,6 @@ public class ModItems {
                     .attributeModifiers(SpearItem.createAttributeModifiers())
                     .component(DataComponentTypes.TOOL, SpearItem.createToolComponent())
                     .enchantable(1)
-                    .modelId(Identifier.ofVanilla("trident_in_hand"))
                     .fireproof()
             ));
 

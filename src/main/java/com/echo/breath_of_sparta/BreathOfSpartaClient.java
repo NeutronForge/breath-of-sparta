@@ -20,14 +20,5 @@ public class BreathOfSpartaClient implements ClientModInitializer {
         EntityRendererRegistry.register(ModEntityType.GOLDEN_SPEAR, context -> new SpearEntityRenderer(context, ModEntityModelLayers.GOLDEN_SPEAR));
         EntityRendererRegistry.register(ModEntityType.DIAMOND_SPEAR, context -> new SpearEntityRenderer(context, ModEntityModelLayers.DIAMOND_SPEAR));
         EntityRendererRegistry.register(ModEntityType.NETHERITE_SPEAR, context -> new SpearEntityRenderer(context, ModEntityModelLayers.NETHERITE_SPEAR));
-
-        EntityRendererRegistry.register(ModEntityType.CUSTOM_WIND_CHARGE, CustomWindChargeEntityRenderer::new);
-
-        EntityRendererRegistry.register(ModEntityType.WOODEN_SPEAR, context -> new SpearEntityRenderer(context, ModEntityModelLayers.WOODEN_SPEAR));
-        EntityRendererRegistry.register(ModEntityType.STONE_SPEAR, context -> new SpearEntityRenderer(context, ModEntityModelLayers.STONE_SPEAR));
-        EntityRendererRegistry.register(ModEntityType.IRON_SPEAR, context -> new SpearEntityRenderer(context, ModEntityModelLayers.IRON_SPEAR));
-        EntityRendererRegistry.register(ModEntityType.GOLDEN_SPEAR, context -> new SpearEntityRenderer(context, ModEntityModelLayers.GOLDEN_SPEAR));
-        EntityRendererRegistry.register(ModEntityType.DIAMOND_SPEAR, context -> new SpearEntityRenderer(context, ModEntityModelLayers.DIAMOND_SPEAR));
-        EntityRendererRegistry.register(ModEntityType.NETHERITE_SPEAR, context -> new SpearEntityRenderer(context, ModEntityModelLayers.NETHERITE_SPEAR));
     }
 }
